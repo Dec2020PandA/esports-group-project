@@ -15,6 +15,7 @@ function App() {
     return () => socket.disconnect(true);
   }, []);
 
+  //Socket emits a message containing a game object, sends it to server
   const sendGame = (e) => {
     e.preventDefault();
     socket.emit("new_game", { gameName: "Valorant" });

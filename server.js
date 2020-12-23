@@ -34,6 +34,7 @@ io.on("connection", (socket) => {
   // let game = new Game({ gameName: "Overwatch" });
   // game.save();
 
+  //Here is where we receive the emit from client and store data into DB
   socket.on("new_game", (data) => {
     console.log(data.gameName);
 
