@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     console.log("Is this running?");
-    socket.on("Welcome", (data) => console.log(data));
+    socket.on("all_games", (data) => console.log(data));
 
     // note that we're returning a callback function
     // this ensures that the underlying socket will be closed if App is unmounted
