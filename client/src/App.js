@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
+import EventScoreCard from "./components/EventScoreCard";
+
 function App() {
   const [socket] = useState(() => io(":8000"));
 
@@ -24,6 +26,7 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       <button onClick={sendGame}>Click me to Emit</button>
+      <EventScoreCard />
     </div>
   );
 }
