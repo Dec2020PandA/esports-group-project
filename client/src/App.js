@@ -5,6 +5,23 @@ import io from "socket.io-client";
 function App() {
   const [socket] = useState(() => io(":8000"));
 
+  const game = {
+    gameType: "VALORANT",
+    teamOne: {
+      teamName: "TSM",
+      mapScore: 0,
+      secondaryScore: 0,
+    },
+    teamTwo: {
+      teamName: "C9",
+      mapScore: 0,
+      secondaryScore: 0,
+    },
+    eventName: "LCS Summer Split",
+    bestOf: 5,
+    time: "9:00 PM CST",
+  };
+
   useEffect(() => {
     console.log("Is this running?");
     socket.on("all_games", (data) => console.log(data));
@@ -18,7 +35,7 @@ function App() {
   //Socket emits a message containing a game object, sends it to server
   const sendGame = (e) => {
     e.preventDefault();
-    socket.emit("new_game", { gameName: "League of Legends" });
+    socket.emit("new_game", game);
   };
 
   return (
