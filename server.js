@@ -34,8 +34,14 @@ io.on("connection", (socket) => {
   // let game = new Game({ gameName: "Overwatch" });
   // game.save();
 
+  //We can emit the data from the database here
+  Game.find(function (err, games) {
+    socket.emit("all_games", { games });
+  });
+
+  //Here is where we receive the emit from client and store data into DB
   socket.on("new_game", (data) => {
-    console.log(data.gameName);
+    console.log(data);
 
     let game = new Game(data);
     game.save();
