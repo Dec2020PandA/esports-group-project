@@ -1,8 +1,12 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
+import { Router } from "@reach/router";
 
 import EventScoreCard from "./components/EventScoreCard";
+import Login from "./views/Login";
+import Register from "./views/Register";
+
+import styles from "./css/App.module.css";
 
 function App() {
   const [socket] = useState(() => io(":8000"));
@@ -42,9 +46,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <button onClick={sendGame}>Click me to Emit</button>
-      <EventScoreCard />
+      {/* <h1>Hello</h1>
+      <button onClick={sendGame}>Click me to Emit</button> */}
+      <Router>
+        <EventScoreCard path="/" />
+        <Login path="/login" />
+        <Register path="/register" />
+      </Router>
     </div>
   );
 }
