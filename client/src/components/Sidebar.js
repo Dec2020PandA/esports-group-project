@@ -49,6 +49,23 @@ export default () => {
           Overwatch
         </button>
       </Link>
+      <p className={styles.sideLabel}>Profile</p>
+      <Link to="">
+        <button
+          onClick={(e) => setActive("profile")}
+          className={active == "profile" ? styles.active : styles.navBtn}
+        >
+          Profile
+        </button>
+      </Link>
+      <Link to="">
+        <button
+          onClick={(e) => setActive("settings")}
+          className={active == "settings" ? styles.active : styles.navBtn}
+        >
+          Settings
+        </button>
+      </Link>
     </div>
   );
 };
