@@ -1,0 +1,49 @@
+.sidebar {
+  height: 80vh;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+  width: 15rem;
+  border-radius: 22px;
+}
+
+.sideLabel {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.5em;
+  color: #595961;
+}
+
+.navBtn {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  color: #adadcd;
+  margin: 1rem 0;
+  font-size: 0.65em;
+  outline: none;
+  height: 3rem;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.navBtn:hover {
+  color: white;
+}
+
+.active {
+  cursor: pointer;
+  outline: none;
+  font-size: 0.7em;
+  margin: 1rem 0;
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  transition: 0.5s;
+}

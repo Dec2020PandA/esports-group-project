@@ -18,6 +18,7 @@ export default () => {
           <input
             className={styles.input}
             type="text"
+            placeholder="JohnDoe@123.com"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -26,6 +27,7 @@ export default () => {
           <input
             className={styles.input}
             type="text"
+            placeholder="John"
             onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
@@ -34,6 +36,7 @@ export default () => {
           <input
             className={styles.input}
             type="text"
+            placeholder="Doe"
             onChange={(e) => setLastName(e.target.value)}
           />
         </div>
@@ -42,6 +45,7 @@ export default () => {
           <input
             className={styles.input}
             type="password"
+            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <Link to="/login" className={styles.redirect}>

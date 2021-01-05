@@ -1,9 +1,12 @@
-import React from "react";
-import "../App.css";
+import React, { useState, useEffect } from "react";
 
-class Dashboard extends React.Component {
-  render() {
-    return <div>s</div>;
-  }
-}
-export default Dashboard;
+import Sidebar from "../components/Sidebar";
+
+export default () => {
+  return (
+    <div>
+      <h1>Dash</h1>
+      <Sidebar />
+    </div>
+  );
+};

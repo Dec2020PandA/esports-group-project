@@ -7,7 +7,7 @@
   margin-top: 5rem;
   width: 40%;
   background-color: #171717;
-  box-shadow: 0 0 10px #00000020;
+  box-shadow: 0 10px 10px #00000020;
   border-radius: 22px;
   padding: 4rem;
   display: flex;
@@ -30,7 +30,7 @@
 
 .label {
   color: #595961;
-  font-size: 0.6em;
+  font-size: 0.55em;
 }
 
 .input {
@@ -43,6 +43,23 @@
   padding: 1rem;
   outline: none;
   transition: 0.2s;
+  font-size: 0.65em;
+}
+
+.input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #595961;
+  opacity: 1; /* Firefox */
+}
+
+.input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #595961;
+}
+
+.input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #595961;
 }
 
 .input:focus {
