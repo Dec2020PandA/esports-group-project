@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className={styles.sidebar}>
       <p className={styles.sideLabel}>Navigation</p>
-      <Link to="">
+      <Link to="/">
         <button
           onClick={(e) => setActive("home")}
           className={active == "home" ? styles.active : styles.navBtn}

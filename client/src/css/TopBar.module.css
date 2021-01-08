@@ -23,6 +23,7 @@
   border: 2px solid transparent;
   border-radius: 22px;
   margin-top: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0.8rem;
   outline: none;
   transition: 0.2s;
@@ -50,14 +51,14 @@
 }
 
 .btn {
+  font-size: 0.5em;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border: none;
   outline: none;
   background-color: #131212;
   border: 3px solid #adadcd;
-  margin-left: 1rem;
   color: #adadcd;
   cursor: pointer;
   transition: 0.2s;
@@ -112,7 +113,6 @@
   }
 
   .btn {
-    margin-left: 0;
     width: 1rem;
     height: 1rem;
     border: 2px solid #adadcd;
