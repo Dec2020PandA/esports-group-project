@@ -13,7 +13,7 @@ export default () => {
           type="text"
           placeholder="Search for players, games, events..."
         />
-        <input className={styles.btn} type="submit" value="Go" />
+        <input className={styles.btn} type="submit" value="S" />
       </div>
 
       <button className={styles.btn}>P</button>
