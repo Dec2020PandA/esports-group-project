@@ -1,6 +1,6 @@
 .sidebar {
   height: 80vh;
-  margin: 8rem 3rem;
+  margin: 0 3rem;
   display: flex;
   flex-direction: column;
   background-color: #171717;
@@ -51,7 +51,7 @@
 
 @media only screen and (max-width: 1450px) {
   .sidebar {
-    margin: 8rem 2rem;
+    margin: 0 2rem;
 
     width: 10rem;
   }
@@ -59,7 +59,7 @@
 
 @media only screen and (max-width: 1024px) {
   .sidebar {
-    margin: 8rem 2rem;
+    margin: 0 2rem;
 
     width: 10rem;
   }

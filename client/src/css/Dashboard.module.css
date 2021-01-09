@@ -1,0 +1,8 @@
+.mainContent {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.game {
+  display: inline-block;
+}
