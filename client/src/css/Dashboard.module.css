@@ -1,0 +1,9 @@
+.mainContent {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,72 @@
+.sidebar {
+  height: 80vh;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+  width: 15rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 10px #00000020;
+}
+
+.sideLabel {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.5em;
+  color: #595961;
+}
+
+.navBtn {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  color: #adadcd;
+  margin: 1rem 0;
+  font-size: 0.65em;
+  outline: none;
+  height: 2rem;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.navBtn:hover {
+  color: white;
+}
+
+.active {
+  cursor: pointer;
+  outline: none;
+  font-size: 0.7em;
+  margin: 1rem 0;
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 1450px) {
+  .sidebar {
+    margin: 0 2rem;
+
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    margin: 0 2rem;
+
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .sidebar {
+    display: none;
+  }
+}
