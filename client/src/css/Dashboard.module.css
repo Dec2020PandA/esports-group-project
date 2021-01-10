@@ -3,6 +3,7 @@
   margin-top: 6rem;
 }
 
-.game {
-  display: inline-block;
+.featured {
+  display: flex;
+  flex-wrap: wrap;
 }
