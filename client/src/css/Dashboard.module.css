@@ -5,11 +5,17 @@
 
 .featured {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
 }
 
 @media only screen and (max-width: 560px) {
   .mainContent {
     margin-top: 1rem;
+  }
+
+  .featured {
+    justify-content: center;
+    align-items: center;
   }
 }

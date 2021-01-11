@@ -3,35 +3,37 @@ import "../App.css";
 import logo from "../resources/tsm.png";
 //NEED TO REPLACE DATA WITH PROPS FROM DATABASE
 
-class EventScoreCard extends React.Component {
-  render() {
-    return (
-      //Card
-      <div className="eventCard">
-        {/* Team 1 Info */}
-        <div style={{ display: "flex", flexDirection: "row", width: "175px" }}>
-          <img src={logo} alt="team logo" className="img" />
-          <div style={{ marginLeft: "10px", textAlign: "left" }}>
-            <p>TSM</p>
-            <p style={{ fontSize: "12px" }}>3W-5L</p>
-          </div>
-        </div>
-        {/* Match Feed */}
-        <div>
-          <p>LIVE</p>
-          <h2>0 - 1</h2>
-          <p>Bo3</p>
-        </div>
-        {/* Team 2 Info */}
-        <div style={{ display: "flex", flexDirection: "row", width: "175px" }}>
-          <div style={{ marginRight: "10px", textAlign: "right" }}>
-            <p>Team Liquid</p>
-            <p style={{ fontSize: "12px" }}>3W-5L</p>
-          </div>
-          <img src={logo} alt="team logo" className="img" />
+import styles from "../css/EventScoreCard.module.css";
+
+export default () => {
+  return (
+    //Card
+    <div className={styles.eventCard}>
+      {/* Team 1 Info */}
+      <div className={styles.teamOneContainer}>
+        <img src={logo} alt="team logo" className={styles.teamLogo} />
+        <div className={styles.teamOneText}>
+          <p className={styles.teamName}>TSM</p>
+          <p className={styles.winLoss}>( 1 )</p>
         </div>
       </div>
-    );
-  }
-}
-export default EventScoreCard;
+      {/* Match Feed */}
+      <div className={styles.scoreContainer}>
+        <p className={styles.live}>
+          LIVE <div className={styles.circleLive}></div>
+        </p>
+        <h2 className={styles.score}>0 - 1</h2>
+        <p className={styles.eventName}>LCS Summer</p>
+        <p className={styles.bestOf}>Bo3</p>
+      </div>
+      {/* Team 2 Info */}
+      <div className={styles.teamTwoContainer}>
+        <div className={styles.teamTwoText}>
+          <p className={styles.teamName}>Team Liquid</p>
+          <p className={styles.winLoss}>( 0 )</p>
+        </div>
+        <img src={logo} alt="team logo" className={styles.teamLogo} />
+      </div>
+    </div>
+  );
+};
