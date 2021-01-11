@@ -9,7 +9,7 @@
   box-shadow: 0 0 10px #00000020;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .searchContainer {
@@ -97,15 +97,16 @@
 
 @media only screen and (max-width: 560px) {
   .container {
-    padding: 0 1rem;
+    padding: 0;
+    position: relative;
   }
 
   .searchContainer {
-    width: 70%;
+    width: 100%;
   }
 
   .input {
-    width: 60%;
+    width: 50%;
   }
 
   .input {

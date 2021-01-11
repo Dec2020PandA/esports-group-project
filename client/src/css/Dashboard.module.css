@@ -7,3 +7,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 560px) {
+  .mainContent {
+    margin-top: 1rem;
+  }
+}
