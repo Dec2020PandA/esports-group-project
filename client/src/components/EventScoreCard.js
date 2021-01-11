@@ -7,7 +7,9 @@ import tl from "../resources/liquid.png";
 
 import styles from "../css/EventScoreCard.module.css";
 
-export default () => {
+export default (props) => {
+  const { game } = props;
+  console.log(game);
   return (
     //Card
     <div className={styles.eventCard}>
@@ -15,24 +17,26 @@ export default () => {
       <div className={styles.teamOneContainer}>
         <img src={tsm} alt="team logo" className={styles.teamLogo} />
         <div className={styles.teamOneText}>
-          <p className={styles.teamName}>TSM</p>
-          <p className={styles.winLoss}>( 1 )</p>
+          <p className={styles.teamName}>{game.teamOne.teamName}</p>
+          <p className={styles.winLoss}>( {game.teamOne.mapScore} )</p>
         </div>
       </div>
       {/* Match Feed */}
       <div className={styles.scoreContainer}>
         <p className={styles.live}>
-          LIVE <div className={styles.circleLive}></div>
+          LIVE <span className={styles.circleLive}></span>
         </p>
-        <h2 className={styles.score}>0 - 1</h2>
-        <p className={styles.eventName}>LCS Summer</p>
-        <p className={styles.bestOf}>Bo3</p>
+        <h2 className={styles.score}>
+          {game.teamOne.secondaryScore} - {game.teamTwo.secondaryScore}
+        </h2>
+        <p className={styles.eventName}>{game.eventName}</p>
+        <p className={styles.bestOf}>Bo{game.bestOf}</p>
       </div>
       {/* Team 2 Info */}
       <div className={styles.teamTwoContainer}>
         <div className={styles.teamTwoText}>
-          <p className={styles.teamName}>Team Liquid</p>
-          <p className={styles.winLoss}>( 0 )</p>
+          <p className={styles.teamName}>{game.teamTwo.teamName}</p>
+          <p className={styles.winLoss}>( {game.teamTwo.mapScore} )</p>
         </div>
         <img src={tl} alt="team logo" className={styles.teamLogo} />
       </div>

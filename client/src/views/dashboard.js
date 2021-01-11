@@ -16,7 +16,7 @@ export default (props) => {
         <Sidebar />
         <div className={styles.featured}>
           {props.games.map((game, index) => (
-            <EventScoreCard />
+            <EventScoreCard key={index} game={game} />
           ))}
         </div>
       </div>
