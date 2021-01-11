@@ -31,64 +31,173 @@ class EventUpdateForm extends React.Component {
       <div>
         <form>
           <fieldset className="form">
-            <div>
-              <div>
-                <label>Team 1</label>
-                <input type="text" name="t1Name" onChange={this.handleChange} />
-
-                <label>Map Score</label>
-                <input
-                  type="number"
-                  name="t1MapScore"
-                  className="numberInput"
-                  onChange={this.handleChange}
-                />
-
-                <label>Round/Kill Score</label>
-                <input
-                  type="number"
-                  name="t1RKScore"
-                  className="numberInput"
-                  onChange={this.handleChange}
-                />
+            <div style={{ margin: "20px", color: "white" }}>
+              {/* team 1 */}
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "60%",
+                    textAlign: "left",
+                  }}
+                >
+                  <label>Team 1</label>
+                  <input
+                    style={{
+                      height: "30px",
+                      width: "100%",
+                      backgroundColor: "#131212",
+                      color: "white",
+                    }}
+                    type="text"
+                    name="t1Name"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label>Map Score</label>
+                  <input
+                    style={{
+                      height: "30px",
+                      backgroundColor: "#131212",
+                      color: "white",
+                    }}
+                    type="number"
+                    name="t1MapScore"
+                    className="numberInput"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label>Round/Kill Score</label>
+                  <input
+                    style={{
+                      height: "30px",
+                      backgroundColor: "#131212",
+                      color: "white",
+                    }}
+                    type="number"
+                    name="t1RKScore"
+                    className="numberInput"
+                    onChange={this.handleChange}
+                  />
+                </div>
               </div>
-              <div>
-                <label>Team 2</label>
-                <input type="text" name="teamTwo" />
-                <label>Map Score</label>
-                <input
-                  type="number"
-                  name="t2MapScore"
-                  className="numberInput"
-                  onChange={this.handleChange}
-                />
-
-                <label>Round/Kill Score</label>
-                <input
-                  type="number"
-                  name="t2RKScore"
-                  className="numberInput"
-                  onChange={this.handleChange}
-                />
+              {/* team 2 */}
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "60%",
+                    textAlign: "left",
+                  }}
+                >
+                  <label>Team 2</label>
+                  <input
+                    type="text"
+                    name="teamTwo"
+                    style={{
+                      height: "30px",
+                      width: "100%",
+                      backgroundColor: "#131212",
+                      color: "white",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <label>Map Score</label>
+                  <input
+                    style={{
+                      height: "30px",
+                      color: "white",
+                      backgroundColor: "#131212",
+                    }}
+                    type="number"
+                    name="t2MapScore"
+                    className="numberInput"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label>Round/Kill Score</label>
+                  <input
+                    style={{
+                      height: "30px",
+                      color: "white",
+                      backgroundColor: "#131212",
+                    }}
+                    type="number"
+                    name="t2RKScore"
+                    className="numberInput"
+                    onChange={this.handleChange}
+                  />
+                </div>
               </div>
-              <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "60%",
+                  textAlign: "left",
+                }}
+              >
                 <label>Event Name</label>
                 <input
+                  style={{
+                    height: "30px",
+                    color: "white",
+                    backgroundColor: "#131212",
+                  }}
                   type="text"
                   name="eventName"
                   onChange={this.handleChange}
                 />
               </div>
-              <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "60%",
+                  textAlign: "left",
+                }}
+              >
                 <label>Best Of</label>
-                <input type="text" name="bestOf" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="bestOf"
+                  onChange={this.handleChange}
+                  style={{
+                    height: "30px",
+                    color: "white",
+                    backgroundColor: "#131212",
+                  }}
+                />
               </div>
-              <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "60%",
+                  textAlign: "left",
+                }}
+              >
                 <label>Time Start</label>
                 <input
                   type="text"
                   name="timeStart"
                   onChange={this.handleChange}
+                  style={{
+                    height: "30px",
+                    color: "white",
+                    backgroundColor: "#131212",
+                  }}
                 />
               </div>
 
