@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  margin-top: 5rem;
+  width: 60%;
+  background-color: #171717;
+  box-shadow: 0 10px 10px #00000020;
+  border-radius: 22px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.teamContainer {
+  width: 100%;
+  display: flex;
+}
+
+.inputGroup {
+  margin: 1rem 0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputGroupSmall {
+  width: 10%;
+  margin: 1rem 0 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputLabel {
+  color: #595961;
+  font-size: 0.6em;
+}
+
+.input {
+  color: white;
+  width: 100%;
+  background-color: #131212;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  outline: none;
+  transition: 0.2s;
+  font-size: 0.65em;
+}
+
+.input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #595961;
+  opacity: 1; /* Firefox */
+}
+
+.input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #595961;
+}
+
+.input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #595961;
+}
+
+.input:focus {
+  border: 2px solid #99e7cd;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 2rem 0;
+  padding: 0.75rem 5rem;
+  border: none;
+  outline: none;
+  font-size: 0.6em;
+  border: 2px solid #99e7cd;
+  background-color: transparent;
+  color: #99e7cd;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: #99e7cd;
+}
