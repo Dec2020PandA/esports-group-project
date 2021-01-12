@@ -5,6 +5,7 @@ import { Router } from "@reach/router";
 import Dashboard from "./views/Dashboard";
 import Login from "./views/Login";
 import Register from "./views/Register";
+import Add from "./views/Add";
 
 import styles from "./css/App.module.css";
 
@@ -58,6 +59,7 @@ function App() {
           <Dashboard path="/" default games={games.games} />
           <Login path="/login" />
           <Register path="/register" />
+          <Add path="/add" />
         </Router>
       )}
     </div>
