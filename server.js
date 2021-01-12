@@ -47,7 +47,16 @@ io.on("connection", (socket) => {
     console.log(data);
 
     let game = new Game(data);
-    game.save();
+    game
+      .save()
+      .then(() => {
+        console.log("yellow");
+        Game.find({}).then((games) => {
+          console.log("found");
+          socket.emit("games", { games });
+        });
+      })
+      .catch((err) => console.log(err));
   });
 
   socket.on("disconnect", () => {

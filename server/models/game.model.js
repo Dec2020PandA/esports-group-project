@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const TeamSchema = new mongoose.Schema({
+  teamLogo: {
+    type: String,
+  },
   teamName: {
     type: String,
     required: [true, "The team must have a name!"],

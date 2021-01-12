@@ -14,17 +14,35 @@ function App() {
   const [games, setGames] = useState();
   const [loaded, setLoaded] = useState(false);
 
+  const fetchChange = () => {
+    console.log("set Update here");
+    socket.emit("get_data");
+  };
+
+  const setData = (data) => {
+    setGames(data);
+    setLoaded(true);
+  };
+
   useEffect(() => {
     console.log("Is this running?");
     socket.on("all_games", (data) => {
       setGames(data);
       setLoaded(true);
     });
+
+    //NOT HERE
+    socket.on("games", () => {
+      console.log("here");
+    });
+    socket.on("updated_games", () => {
+      console.log("here");
+    });
     // note that we're returning a callback function
     // this ensures that the underlying socket will be closed if App is unmounted
     // this would be more critical if we were creating the socket in a subcomponent
     return () => socket.disconnect(true);
-  }, [games]);
+  });
 
   //Socket emits a message containing a game object, sends it to server
 

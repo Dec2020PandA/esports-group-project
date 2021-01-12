@@ -15,7 +15,11 @@ export default (props) => {
     <div className={styles.eventCard}>
       {/* Team 1 Info */}
       <div className={styles.teamOneContainer}>
-        <img src={tsm} alt="team logo" className={styles.teamLogo} />
+        <img
+          src={game.teamOne.teamLogo}
+          alt="team logo"
+          className={styles.teamLogo}
+        />
         <div className={styles.teamOneText}>
           <p className={styles.teamName}>{game.teamOne.teamName}</p>
           <p className={styles.winLoss}>( {game.teamOne.mapScore} )</p>
@@ -38,7 +42,11 @@ export default (props) => {
           <p className={styles.teamName}>{game.teamTwo.teamName}</p>
           <p className={styles.winLoss}>( {game.teamTwo.mapScore} )</p>
         </div>
-        <img src={tl} alt="team logo" className={styles.teamLogo} />
+        <img
+          src={game.teamTwo.teamLogo}
+          alt="team logo"
+          className={styles.teamLogo}
+        />
       </div>
     </div>
   );
