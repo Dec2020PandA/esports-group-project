@@ -16,7 +16,21 @@ export default () => {
 
   return (
     <div>
-      <EventForm submit={sendGame} />
+      <EventForm
+        gameType=""
+        teamOne=""
+        teamOneLogo=""
+        teamTwo=""
+        teamTwoLogo=""
+        teamOneMS=""
+        teamOneRS=""
+        teamTwoMS=""
+        teamTwoRS=""
+        eventName=""
+        bestOf=""
+        time=""
+        submit={sendGame}
+      />
     </div>
   );
 };
