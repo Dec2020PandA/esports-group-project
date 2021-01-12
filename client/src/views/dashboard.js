@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { Link } from "@reach/router";
+
 import TopBar from "../components/TopBar";
 import Sidebar from "../components/Sidebar";
 
@@ -16,7 +18,14 @@ export default (props) => {
         <Sidebar />
         <div className={styles.featured}>
           {props.games.map((game, index) => (
-            <EventScoreCard key={index} game={game} />
+            <Link
+              key={index}
+              className={styles.link}
+              to={`/${game._id}/edit`}
+              state={game}
+            >
+              <EventScoreCard game={game} />
+            </Link>
           ))}
         </div>
       </div>

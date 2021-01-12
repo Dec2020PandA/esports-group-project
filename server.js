@@ -42,6 +42,8 @@ io.on("connection", (socket) => {
     socket.emit("all_games", { games });
   });
 
+  socket.on("get_data", () => {});
+
   //Here is where we receive the emit from client and store data into DB
   socket.on("new_game", (data) => {
     console.log(data);
@@ -52,8 +54,7 @@ io.on("connection", (socket) => {
       .then(() => {
         console.log("yellow");
         Game.find({}).then((games) => {
-          console.log("found");
-          socket.emit("games", { games });
+          io.emit("games", { games });
         });
       })
       .catch((err) => console.log(err));

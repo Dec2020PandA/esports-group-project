@@ -6,6 +6,7 @@ import Dashboard from "./views/Dashboard";
 import Login from "./views/Login";
 import Register from "./views/Register";
 import Add from "./views/Add";
+import Edit from "./views/Edit";
 
 import styles from "./css/App.module.css";
 
@@ -13,16 +14,6 @@ function App() {
   const [socket] = useState(() => io(":8000"));
   const [games, setGames] = useState();
   const [loaded, setLoaded] = useState(false);
-
-  const fetchChange = () => {
-    console.log("set Update here");
-    socket.emit("get_data");
-  };
-
-  const setData = (data) => {
-    setGames(data);
-    setLoaded(true);
-  };
 
   useEffect(() => {
     console.log("Is this running?");
@@ -35,9 +26,7 @@ function App() {
     socket.on("games", () => {
       console.log("here");
     });
-    socket.on("updated_games", () => {
-      console.log("here");
-    });
+
     // note that we're returning a callback function
     // this ensures that the underlying socket will be closed if App is unmounted
     // this would be more critical if we were creating the socket in a subcomponent
@@ -57,6 +46,7 @@ function App() {
           <Login path="/login" />
           <Register path="/register" />
           <Add path="/add" />
+          <Edit path="/:id/edit" />
         </Router>
       )}
     </div>
