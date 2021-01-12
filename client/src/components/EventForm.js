@@ -20,7 +20,7 @@ export default (props) => {
 
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         {/* team 1 */}
         <div className={styles.teamContainer}>
           <div className={styles.inputGroup}>
