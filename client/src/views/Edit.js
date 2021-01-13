@@ -8,12 +8,13 @@ import styles from "../css/Add.module.css";
 
 export default (props) => {
   const game = props.location.state;
-  console.log(game);
+  const gameId = game._id;
+  console.log(gameId);
   const [socket] = useState(() => io(":8000"));
 
   const sendGame = (game) => {
     console.log(game);
-    socket.emit("update_game", game);
+    socket.emit("update_game", { gameId, game });
   };
 
   return (

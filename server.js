@@ -42,7 +42,14 @@ io.on("connection", (socket) => {
     socket.emit("all_games", { games });
   });
 
-  socket.on("get_data", () => {});
+  socket.on("update_game", (data) => {
+    Game.findOneAndUpdate({ _id: data.gameId }, data.game, {
+      new: true,
+      runValidators: true,
+    })
+      .then((updatedGame) => console.log(updatedGame))
+      .catch((err) => console.log(err));
+  });
 
   //Here is where we receive the emit from client and store data into DB
   socket.on("new_game", (data) => {
