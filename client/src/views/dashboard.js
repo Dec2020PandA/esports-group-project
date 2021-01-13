@@ -24,7 +24,7 @@ export default (props) => {
               to={`/${game._id}/edit`}
               state={game}
             >
-              <EventScoreCard game={game} />
+              <EventScoreCard game={game} index={index} />
             </Link>
           ))}
         </div>

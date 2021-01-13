@@ -9,10 +9,16 @@ import styles from "../css/EventScoreCard.module.css";
 
 export default (props) => {
   const { game } = props;
-  console.log(game);
+
+  const stagger = 150;
+
+  console.log(props.index);
   return (
     //Card
-    <div className={styles.eventCard}>
+    <div
+      style={{ "animation-delay": `${props.index * stagger}ms` }}
+      className={styles.eventCard}
+    >
       {/* Team 1 Info */}
       <div className={styles.teamOneContainer}>
         <img

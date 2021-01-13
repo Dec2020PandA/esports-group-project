@@ -12,6 +12,22 @@
   box-shadow: 0 10px 10px #00000020;
   margin-bottom: 2rem;
   transition: 0.2s;
+  animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .eventCard:hover {
@@ -105,6 +121,7 @@
 .eventName {
   margin: 0;
   font-size: 0.7em;
+  font-family: "Poppins", sans-serif;
   color: #adadcd;
 }
 
