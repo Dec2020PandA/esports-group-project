@@ -4,7 +4,7 @@
   align-items: center;
 }
 .form {
-  margin-top: 5rem;
+  margin-bottom: 3rem;
   width: 60%;
   background-color: #171717;
   box-shadow: 0 10px 10px #00000020;
@@ -13,6 +13,22 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  animation: slide 0.8s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .teamContainer {

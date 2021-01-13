@@ -16,6 +16,7 @@ export default () => {
 
   return (
     <div>
+      <h1>Add</h1>
       <EventForm
         gameType=""
         teamOne=""

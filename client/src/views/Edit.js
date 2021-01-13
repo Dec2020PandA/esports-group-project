@@ -19,6 +19,7 @@ export default (props) => {
 
   return (
     <div>
+      <h1>Update</h1>
       <EventForm
         submit={sendGame}
         gameType={game.gameType}
